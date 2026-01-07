@@ -1,6 +1,17 @@
 import Image from "next/image";
+import {SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript, SiGit} from 'react-icons/si';
+import LogoLoop from "@/components/LogoLoop";
 
 export default function Home() {
+  const techLogos = [
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+    { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+  ];
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -12,6 +23,19 @@ export default function Home() {
           height={20}
           priority
         />
+        <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+          {/* Basic horizontal loop */}
+          <LogoLoop
+              logos={techLogos}
+              speed={50}
+              direction="left"
+              logoHeight={48}
+              gap={40}
+              hoverSpeed={0}
+              scaleOnHover
+              ariaLabel="Technology partners"
+          />
+        </div>
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
