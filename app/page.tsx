@@ -62,7 +62,7 @@ export default function Home() {
 
               <div id="social-media" className="flex items-center justify-center md:justify-start space-x-2 md:space-x-4 p-2 md:p-4">
               <a href="https://www.instagram.com/dannythebozo/"
-                  className="text-2xl md:text-4xl text-white hover:text-pink-300 drop-shadow-lg">
+                  className="text-2xl md:text-4xl text-white hover:text-pink-500 drop-shadow-lg">
                 <FaInstagram/>
               </a>
               <a href="https://www.youtube.com/@dannythebozo"
@@ -74,10 +74,10 @@ export default function Home() {
                 <FaTwitch/>
               </a>
               <a href="https://www.linkedin.com/in/daniel-tran-42661a1b5/"
-                 className="text-2xl md:text-4xl text-white hover:text-blue-300 drop-shadow-lg">
+                 className="text-2xl md:text-4xl text-white hover:text-blue-700 drop-shadow-lg">
                 <FaLinkedin/>
               </a>
-              <a href="https://github.com/dtb354" className="text-2xl md:text-4xl text-white hover:text-yellow-300 drop-shadow-lg">
+              <a href="https://github.com/dtb354" className="text-2xl md:text-4xl text-white hover:text-blue-300 drop-shadow-lg">
                 <FaGithub/>
               </a>
             </div>
