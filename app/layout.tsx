@@ -86,14 +86,14 @@ export default function RootLayout({
                 <img src="/dtb-logo.png" alt="Logo" className="w-36 h-36 rounded-full" id="website-logo"/>
             </div>
             <div id="nav-links"
-                 className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 mt-4 md:mt-0">
+                 className="relative flex flex-col md:flex-row items-center mt-4 md:mt-0">
                 <BubbleMenu
                     items={items}
                     logo="/dtb-logo.png"
                     menuAriaLabel="Toggle navigation"
                     menuBg="#ffffff"
                     menuContentColor="#111111"
-                    useFixedPosition={false}
+                    useFixedPosition={true}
                     animationEase="back.out(1.5)"
                     animationDuration={0.5}
                     staggerDelay={0.12}

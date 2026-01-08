@@ -96,14 +96,15 @@ export default function BubbleMenu({
     'bubble-menu',
     useFixedPosition ? 'fixed' : 'absolute',
     'right-0 top-8',
-    'flex items-center justify-end',
+    'w-full',
+    'flex items-center',
     'gap-4 px-8',
     'pointer-events-none',
     'z-[1001]',
     className
   ]
-    .filter(Boolean)
-    .join(' ');
+      .filter(Boolean)
+      .join(' ');
 
   const handleToggle = () => {
     const nextState = !isMenuOpen;
@@ -242,23 +243,24 @@ export default function BubbleMenu({
       <nav className={containerClassName} style={style} aria-label="Main navigation">
 
         <button
-          type="button"
-          className={[
-            'bubble toggle-bubble menu-btn',
-            isMenuOpen ? 'open' : '',
-            'inline-flex flex-col items-center justify-center',
-            'rounded-full',
-            'bg-white',
-            'shadow-[0_4px_16px_rgba(0,0,0,0.12)]',
-            'pointer-events-auto',
-            'w-12 h-12 md:w-14 md:h-14',
-            'border-0 cursor-pointer p-0',
-            'will-change-transform'
-          ].join(' ')}
-          onClick={handleToggle}
-          aria-label={menuAriaLabel}
-          aria-pressed={isMenuOpen}
-          style={{ background: menuBg }}
+            type="button"
+            className={[
+              'bubble toggle-bubble menu-btn',
+              isMenuOpen ? 'open' : '',
+              'inline-flex flex-col items-center justify-center',
+              'rounded-full',
+              'bg-white',
+              'shadow-[0_4px_16px_rgba(0,0,0,0.12)]',
+              'pointer-events-auto',
+              'w-12 h-12 md:w-14 md:h-14',
+              'border-0 cursor-pointer p-0',
+              'will-change-transform',
+              'ml-auto'
+            ].join(' ')}
+            onClick={handleToggle}
+            aria-label={menuAriaLabel}
+            aria-pressed={isMenuOpen}
+            style={{ background: menuBg }}
         >
           <span
             className="menu-line block mx-auto rounded-[2px]"
@@ -290,7 +292,7 @@ export default function BubbleMenu({
             useFixedPosition ? 'fixed' : 'absolute',
             'top-8 right-0 left-0',  // Changed from inset-0
             'flex items-center justify-center',
-            'pointer-events-none',
+            'pointer-events-auto',
             'z-[1000]'
           ].join(' ')}
           aria-hidden={!isMenuOpen}
