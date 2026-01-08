@@ -25,17 +25,18 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main
           className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <section id="about-section" className="relative w-full md:w-10/12 mx-auto rounded-lg overflow-hidden shadow-2xl" style={{ minHeight: '500px' }}>
+        <section id="about-section" className="relative w-full md:w-10/12 mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-900" style={{ minHeight: '500px' }}>
           {/* Hyperspeed Background */}
           <div className="absolute inset-0 z-0 w-full h-full">
             <Hyperspeed
-                effectOptions={hyperspeedPresets.three}
+                effectOpti ons={hyperspeedPresets.five}
             />
           </div>
 
           {/* Content Overlay */}
           <div className="relative z-10 flex flex-col md:flex-row w-full h-full p-4 md:p-8 gap-4 md:gap-8 bg-black/40 backdrop-blur-md">
             <div id="left-section" className="w-full md:w-1/4 p-2 md:p-4 flex flex-col items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/face3.jpeg" alt="Picture of Daniel Tran holding his thumb up"
                    className="rounded-full w-40 h-40 md:w-48 md:h-48 mb-4 shadow-lg border-4 border-white/80"/>
             </div>
@@ -46,7 +47,7 @@ export default function Home() {
                 <p className="text-base md:text-lg leading-relaxed mb-4 drop-shadow-md">
                   Hello world! I&apos;m Daniel, an aspiring Full-Stack software developer/engineer. I am currently
                   studying Creative Media and Game Technologies at the
-                  Rotterdam University of Applied Sciences. I also have the ambition to pursue a Master&apos;s Degree in Software Engineering at University of Amsterdam!
+                  Rotterdam University of Applied Sciences with the ambition to pursue a Master&apos;s Degree in Software Engineering at University of Amsterdam!
                 </p>
                 <p className="text-base md:text-lg leading-relaxed mt-10 drop-shadow-md">
                   I have experience
@@ -61,7 +62,7 @@ export default function Home() {
 
               <div id="social-media" className="flex items-center justify-center md:justify-start space-x-2 md:space-x-4 p-2 md:p-4">
               <a href="https://www.instagram.com/dannythebozo/"
-                 className="text-2xl md:text-4xl text-white hover:text-pink-300 drop-shadow-lg">
+                  className="text-2xl md:text-4xl text-white hover:text-pink-300 drop-shadow-lg">
                 <FaInstagram/>
               </a>
               <a href="https://www.youtube.com/@dannythebozo"

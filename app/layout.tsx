@@ -24,15 +24,15 @@ export const metadata: Metadata = {
 const items = [
     {
         label: 'home',
-        href: '#',
+        href: '/',
         ariaLabel: 'Home',
         rotation: -8,
         hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
     },
     {
         label: 'about',
-        href: '#',
-        ariaLabel: 'About',
+        href: '/about-me',
+        ariaLabel: 'About Me',
         rotation: 8,
         hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
     },
@@ -82,12 +82,14 @@ export default function RootLayout({
     <header>
         <nav className="p-4 flex flex-col md:flex-row md:justify-between md:items-center bg-amber-500">
             <div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/dtb-logo.png" alt="Logo" className="w-36 h-36 rounded-full" id="website-logo"/>
             </div>
             <div id="nav-links"
                  className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 mt-4 md:mt-0">
                 <BubbleMenu
                     items={items}
+                    logo="/dtb-logo.png"
                     menuAriaLabel="Toggle navigation"
                     menuBg="#ffffff"
                     menuContentColor="#111111"

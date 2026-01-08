@@ -3,6 +3,7 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import Link from "next/link";
 
 type MenuItem = {
   label: string;
@@ -33,14 +34,14 @@ export type BubbleMenuProps = {
 const DEFAULT_ITEMS: MenuItem[] = [
   {
     label: 'home',
-    href: '#',
+    href: '/',
     ariaLabel: 'Home',
     rotation: -8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'about',
-    href: '#',
+    href: '/about-me',
     ariaLabel: 'About',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
@@ -287,7 +288,7 @@ export default function BubbleMenu({
           className={[
             'bubble-menu-items',
             useFixedPosition ? 'fixed' : 'absolute',
-            'inset-0',
+            'top-8 right-0 left-0',  // Changed from inset-0
             'flex items-center justify-center',
             'pointer-events-none',
             'z-[1000]'
@@ -317,7 +318,7 @@ export default function BubbleMenu({
                   'box-border'
                 ].join(' ')}
               >
-                <a
+                <Link
                   role="menuitem"
                   href={item.href}
                   aria-label={item.ariaLabel || item.label}
@@ -370,7 +371,7 @@ export default function BubbleMenu({
                   >
                     {item.label}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
