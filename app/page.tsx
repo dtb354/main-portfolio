@@ -1,81 +1,134 @@
+'use client';
+
 import Image from "next/image";
-import {SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript, SiGit} from 'react-icons/si';
-import LogoLoop from "@/components/LogoLoop";
+import {SiCplusplus, SiLaravel} from 'react-icons/si';
+
+import {
+  FaCss3Alt, FaDatabase, FaFigma, FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaInstagram,
+  FaJs,
+  FaLinkedin,
+  FaPhp,
+  FaPython,
+  FaTwitch,
+  FaYoutube
+} from "react-icons/fa";
+
+import Hyperspeed from "@/components/Hyperspeed";
+import {hyperspeedPresets} from "@/components/HyperSpeedPresets";
 
 export default function Home() {
-  const techLogos = [
-    { node: <SiReact />, title: "React", href: "https://react.dev" },
-    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-    { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-    { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
-  ];
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
-          {/* Basic horizontal loop */}
-          <LogoLoop
-              logos={techLogos}
-              speed={50}
-              direction="left"
-              logoHeight={48}
-              gap={40}
-              hoverSpeed={0}
-              width="36rem"
-              scaleOnHover
-              ariaLabel="Technology partners"
-          />
-        </div>
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      <main
+          className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <section id="about-section" className="relative w-full md:w-10/12 mx-auto rounded-lg overflow-hidden shadow-2xl" style={{ minHeight: '500px' }}>
+          {/* Hyperspeed Background */}
+          <div className="absolute inset-0 z-0 w-full h-full">
+            <Hyperspeed
+                effectOptions={hyperspeedPresets.three}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+
+          {/* Content Overlay */}
+          <div className="relative z-10 flex flex-col md:flex-row w-full h-full p-4 md:p-8 gap-4 md:gap-8 bg-black/40 backdrop-blur-md">
+            <div id="left-section" className="w-full md:w-1/4 p-2 md:p-4 flex flex-col items-center justify-center">
+              <img src="/face3.jpeg" alt="Picture of Daniel Tran holding his thumb up"
+                   className="rounded-full w-40 h-40 md:w-48 md:h-48 mb-4 shadow-lg border-4 border-white/80"/>
+            </div>
+
+            <div id="right-section" className="w-full md:w-3/4 p-2 md:p-4 flex flex-col justify-center text-white">
+              <h1 className="text-xl md:text-4xl font-bold mb-4 drop-shadow-lg">Your Friendly Neighbourhood Full-Stack Engineer</h1>
+              <div className="bio mb-6">
+                <p className="text-base md:text-lg leading-relaxed mb-4 drop-shadow-md">
+                  Hello world! I&apos;m Daniel, an aspiring Full-Stack software developer/engineer. I am currently
+                  studying Creative Media and Game Technologies at the
+                  Rotterdam University of Applied Sciences. I also have the ambition to pursue a Master&apos;s Degree in Software Engineering at University of Amsterdam!
+                </p>
+                <p className="text-base md:text-lg leading-relaxed mt-10 drop-shadow-md">
+                  I have experience
+                  in Full-Stack development, DevOps, and UX design. With my background in programming as well as architectural
+                  engineering, I am equipped and ambitious
+                  to pursue any project.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed mt-10 drop-shadow-md">
+                  Outside my career and studies, I enjoy going to the gym, playing games, and making videos on YouTube!
+                </p>
+              </div>
+
+              <div id="social-media" className="flex items-center justify-center md:justify-start space-x-2 md:space-x-4 p-2 md:p-4">
+              <a href="https://www.instagram.com/dannythebozo/"
+                 className="text-2xl md:text-4xl text-white hover:text-pink-300 drop-shadow-lg">
+                <FaInstagram/>
+              </a>
+              <a href="https://www.youtube.com/@dannythebozo"
+                 className="text-2xl md:text-4xl text-white hover:text-red-400 drop-shadow-lg">
+                <FaYoutube/>
+              </a>
+              <a href="https://www.twitch.tv/dannythebozo"
+                 className="text-2xl md:text-4xl text-white hover:text-purple-400 drop-shadow-lg">
+                <FaTwitch/>
+              </a>
+              <a href="https://www.linkedin.com/in/daniel-tran-42661a1b5/"
+                 className="text-2xl md:text-4xl text-white hover:text-blue-300 drop-shadow-lg">
+                <FaLinkedin/>
+              </a>
+              <a href="https://github.com/dtb354" className="text-2xl md:text-4xl text-white hover:text-yellow-300 drop-shadow-lg">
+                <FaGithub/>
+              </a>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills-section" className="w-full flex flex-col items-center justify-center p-8">
+          <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
+          <div id="skill-icons" className="flex items-center justify-center space-x-4 md:space-x-6 p-4 flex-wrap max-w-4xl">
+            <i className="text-3xl md:text-5xl">
+              <FaJs/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaHtml5/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaCss3Alt/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaPhp/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaPython/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <SiCplusplus/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaGitAlt/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaGithub/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaFigma/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <FaDatabase/>
+            </i>
+          </div>
+        </section>
+
+
+        <section id="frameworks-section" className="w-full flex flex-col items-center justify-center p-8">
+          <h2 className="text-4xl font-bold mb-8 text-center">Frameworks</h2>
+          <div id="skill-icons" className="flex items-center justify-center space-x-4 md:space-x-6 p-4 flex-wrap max-w-4xl">
+            <i className="text-3xl md:text-5xl">
+              <SiLaravel/>
+            </i>
+          </div>
+        </section>
       </main>
     </div>
   );
