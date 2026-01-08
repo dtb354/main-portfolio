@@ -29,7 +29,7 @@ export default function Home() {
           {/* Hyperspeed Background */}
           <div className="absolute inset-0 z-0 w-full h-full">
             <Hyperspeed
-                effectOpti ons={hyperspeedPresets.five}
+                effectOptions={hyperspeedPresets.five}
             />
           </div>
 
