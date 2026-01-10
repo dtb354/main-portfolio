@@ -85,8 +85,7 @@ export default function RootLayout({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/dtb-logo.png" alt="Logo" className="w-36 h-36 rounded-full" id="website-logo"/>
             </div>
-            <div id="nav-links"
-                 className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 mt-4 md:mt-0">
+            <div id="nav-links" className="">
                 <BubbleMenu
                     items={items}
                     logo="/dtb-logo.png"

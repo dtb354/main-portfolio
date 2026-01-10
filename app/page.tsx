@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import {SiCplusplus, SiLaravel} from 'react-icons/si';
+import {SiCplusplus, SiExpress, SiLaravel, SiNextdotjs} from 'react-icons/si';
 
 import {
   FaCss3Alt, FaDatabase, FaFigma, FaGitAlt,
@@ -127,6 +127,12 @@ export default function Home() {
           <div id="skill-icons" className="flex items-center justify-center space-x-4 md:space-x-6 p-4 flex-wrap max-w-4xl">
             <i className="text-3xl md:text-5xl">
               <SiLaravel/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <SiNextdotjs/>
+            </i>
+            <i className="text-3xl md:text-5xl">
+              <SiExpress/>
             </i>
           </div>
         </section>

@@ -97,7 +97,6 @@ export default function BubbleMenu({
     useFixedPosition ? 'fixed' : 'absolute',
     'right-0 top-8',
     'flex items-center justify-end',
-    'gap-4 px-8',
     'pointer-events-none',
     'z-[1001]',
     className
@@ -242,23 +241,24 @@ export default function BubbleMenu({
       <nav className={containerClassName} style={style} aria-label="Main navigation">
 
         <button
-          type="button"
-          className={[
-            'bubble toggle-bubble menu-btn',
-            isMenuOpen ? 'open' : '',
-            'inline-flex flex-col items-center justify-center',
-            'rounded-full',
-            'bg-white',
-            'shadow-[0_4px_16px_rgba(0,0,0,0.12)]',
-            'pointer-events-auto',
-            'w-12 h-12 md:w-14 md:h-14',
-            'border-0 cursor-pointer p-0',
-            'will-change-transform'
-          ].join(' ')}
-          onClick={handleToggle}
-          aria-label={menuAriaLabel}
-          aria-pressed={isMenuOpen}
-          style={{ background: menuBg }}
+            type="button"
+            className={[
+              'bubble toggle-bubble menu-btn',
+              isMenuOpen ? 'open' : '',
+              'inline-flex flex-col items-center justify-center',
+              'rounded-full',
+              'bg-white',
+              'shadow-[0_4px_16px_rgba(0,0,0,0.12)]',
+              'pointer-events-auto',
+              'w-12 h-12 md:w-14 md:h-14',
+              'border-0 cursor-pointer p-0',
+              'will-change-transform',
+                'p-2'
+            ].join(' ')}
+            onClick={handleToggle}
+            aria-label={menuAriaLabel}
+            aria-pressed={isMenuOpen}
+            style={{ background: menuBg }}
         >
           <span
             className="menu-line block mx-auto rounded-[2px]"
