@@ -22,9 +22,9 @@ import {hyperspeedPresets} from "@/components/HyperSpeedPresets";
 export default function Home() {
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex min-h-screen items-center justify-center font-sans dark:bg-black">
       <main
-          className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+          className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 dark:bg-black sm:items-start">
         <section id="about-section" className="relative w-full md:w-10/12 mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-900" style={{ minHeight: '500px' }}>
           {/* Hyperspeed Background */}
           <div className="absolute inset-0 z-0 w-full h-full">
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
 
           {/* Content Overlay */}
-          <div className="relative z-10 flex flex-col md:flex-row w-full h-full p-4 md:p-8 gap-4 md:gap-8 bg-black/40 backdrop-blur-md">
+          <div className="relative z-10 flex flex-col md:flex-row w-full h-full p-4 md:p-8 gap-4 md:gap-8 bg-black/40 backdrop-blur-xs">
             <div id="left-section" className="w-full md:w-1/4 p-2 md:p-4 flex flex-col items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/face3.jpeg" alt="Picture of Daniel Tran holding his thumb up"
@@ -66,18 +66,19 @@ export default function Home() {
                 <FaInstagram/>
               </a>
               <a href="https://www.youtube.com/@dannythebozo"
-                 className="text-2xl md:text-4xl text-white hover:text-red-400 drop-shadow-lg">
+                 className="text-2xl md:text-4xl text-white hover:text-red-500 drop-shadow-lg">
                 <FaYoutube/>
               </a>
               <a href="https://www.twitch.tv/dannythebozo"
-                 className="text-2xl md:text-4xl text-white hover:text-purple-400 drop-shadow-lg">
+                 className="text-2xl md:text-4xl text-white hover:text-purple-600 drop-shadow-lg">
                 <FaTwitch/>
               </a>
               <a href="https://www.linkedin.com/in/daniel-tran-42661a1b5/"
                  className="text-2xl md:text-4xl text-white hover:text-blue-700 drop-shadow-lg">
                 <FaLinkedin/>
               </a>
-              <a href="https://github.com/dtb354" className="text-2xl md:text-4xl text-white hover:text-blue-300 drop-shadow-lg">
+              <a href="https://github.com/dtb354"
+                 className="text-2xl md:text-4xl text-white hover:text-blue-300 drop-shadow-lg">
                 <FaGithub/>
               </a>
             </div>
@@ -86,36 +87,36 @@ export default function Home() {
         </section>
 
         <section id="skills-section" className="w-full flex flex-col items-center justify-center p-8">
-          <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-amber-200">Skills</h2>
           <div id="skill-icons" className="flex items-center justify-center space-x-4 md:space-x-6 p-4 flex-wrap max-w-4xl">
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaJs/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaHtml5/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaCss3Alt/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaPhp/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaPython/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <SiCplusplus/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaGitAlt/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaGithub/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaFigma/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <FaDatabase/>
             </i>
           </div>
@@ -123,15 +124,15 @@ export default function Home() {
 
 
         <section id="frameworks-section" className="w-full flex flex-col items-center justify-center p-8">
-          <h2 className="text-4xl font-bold mb-8 text-center">Frameworks</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-amber-200">Frameworks</h2>
           <div id="skill-icons" className="flex items-center justify-center space-x-4 md:space-x-6 p-4 flex-wrap max-w-4xl">
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <SiLaravel/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <SiNextdotjs/>
             </i>
-            <i className="text-3xl md:text-5xl">
+            <i className="text-3xl md:text-5xl text-amber-200">
               <SiExpress/>
             </i>
           </div>

@@ -30,7 +30,7 @@ const items = [
         hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
     },
     {
-        label: 'about',
+        label: 'about me',
         href: '/about-me',
         ariaLabel: 'About Me',
         rotation: 8,
@@ -38,23 +38,16 @@ const items = [
     },
     {
         label: 'projects',
-        href: '#',
+        href: '/projects',
         ariaLabel: 'Projects',
         rotation: 8,
-        hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#f50b1f', textColor: '#ffffff' }
     },
     {
         label: 'contact',
         href: '#',
         ariaLabel: 'Contact',
         rotation: -8,
-        hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
-    },
-    {
-        label: 'contact',
-        href: '#',
-        ariaLabel: 'Contact',
-        rotation: 6,
         hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
     },
 
@@ -77,8 +70,9 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-500`}
     >
+
     <header>
         <nav className="p-4 flex flex-col md:flex-row md:justify-between md:items-center bg-amber-500">
             <div>
@@ -102,7 +96,7 @@ export default function RootLayout({
     </header>
 
     {children}
-    <footer>
+    <footer className="bg-gray-200">
         <div className="flex justify-center items-center p-4">
             <p className="text-gray-700">© 2025 Daniel Tran. All rights reserved.</p>
         </div>
