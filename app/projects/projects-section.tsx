@@ -2,6 +2,19 @@
 
 import React from "react";
 import Image from "next/image";
+import { LuCode } from "react-icons/lu";
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiLaravel,
+  SiMysql,
+  SiOpenai,
+  SiPhp,
+  SiTailwindcss,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 
 interface Project {
   id: number;
@@ -11,6 +24,84 @@ interface Project {
   technologies: string[];
   link?: string;
   github?: string;
+}
+
+type TechIconMeta = {
+  label: string;
+  icon: IconType;
+  badgeClassName: string;
+};
+
+const BASE_BADGE_CLASS =
+  "inline-flex items-center gap-1.5 px-3 py-1 text-sm rounded-full";
+
+const TECH_ICON_MAP: Record<string, TechIconMeta> = {
+  php: {
+    label: "PHP",
+    icon: SiPhp,
+    badgeClassName: "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200",
+  },
+  javascript: {
+    label: "JavaScript",
+    icon: SiJavascript,
+    badgeClassName: "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
+  },
+  mysql: {
+    label: "MySQL",
+    icon: SiMysql,
+    badgeClassName: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
+  },
+  "html/css": {
+    label: "HTML/CSS",
+    icon: SiHtml5,
+    badgeClassName: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  },
+  html: {
+    label: "HTML",
+    icon: SiHtml5,
+    badgeClassName: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  },
+  css: {
+    label: "CSS",
+    icon: SiCss3,
+    badgeClassName: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200",
+  },
+  tailwindcss: {
+    label: "Tailwind CSS",
+    icon: SiTailwindcss,
+    badgeClassName: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+  },
+  laravel: {
+    label: "Laravel",
+    icon: SiLaravel,
+    badgeClassName: "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200",
+  },
+  "laravel cloud": {
+    label: "Laravel Cloud",
+    icon: SiLaravel,
+    badgeClassName: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+  },
+  "jwt web tokens": {
+    label: "JWT",
+    icon: SiJsonwebtokens,
+    badgeClassName: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+  },
+  openai: {
+    label: "OpenAI",
+    icon: SiOpenai,
+    badgeClassName: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200",
+  },
+};
+
+function getTechIconMeta(technology: string): TechIconMeta {
+  const normalizedTechnology = technology.trim().toLowerCase();
+  return (
+    TECH_ICON_MAP[normalizedTechnology] ?? {
+      label: technology,
+      icon: LuCode,
+      badgeClassName: "bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-200",
+    }
+  );
 }
 
 const projects: Project[] = [
@@ -38,8 +129,16 @@ const projects: Project[] = [
     description: "A web clicker game built using Laravel to bring awareness to animal life in the Netherlands developed for Natuurmonumenten",
     image: "/project-images/NMKlikker.png",
     technologies: ["Laravel", "PHP", "HTML/CSS", "TailwindCSS"],
-    github: "https://github.com/username/project3",
+    github: "https://github.com/BoorZuur/TLE2",
   },
+  {
+    id: 4,
+    title: "Internship Matching REST api",
+    description: "Developed a back end for various internship matching platforms that utilises an AI algorithm to match students to internships.",
+    image: "/project-images/ERD-internshipmatching.png",
+    technologies: ["Laravel", "PHP", "JWT Web Tokens"],
+    github: "https://github.com/TLE-3-Stage-Matching/Back-End"
+  }
 ];
 
 export default function ProjectsSection() {
@@ -66,14 +165,20 @@ export default function ProjectsSection() {
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {project.technologies.map((tech) => {
+                  const techMeta = getTechIconMeta(tech);
+                  const Icon = techMeta.icon;
+
+                  return (
+                    <span
+                      key={tech}
+                      className={`${BASE_BADGE_CLASS} ${techMeta.badgeClassName}`}
+                    >
+                      <Icon className="h-4 w-4" aria-hidden="true" />
+                      {techMeta.label}
+                    </span>
+                  );
+                })}
               </div>
               <div className="flex gap-4">
                 {project.link && (
