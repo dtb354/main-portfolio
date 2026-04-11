@@ -1,4 +1,5 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
+import type { IconType } from "react-icons";
 
 type ContactEntry = {
 	text: string;
@@ -7,7 +8,7 @@ type ContactEntry = {
 
 type ContactMethod = {
 	label: string;
-	Icon: React.ComponentType<{ ariaHidden?: boolean } | { "aria-hidden": boolean }>;
+	Icon: IconType;
 	entries: ContactEntry[];
 };
 
