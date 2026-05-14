@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import BubbleMenu from "@/components/BubbleMenu";
 import LogoLoop from "@/components/LogoLoop";
+import PillNav from "@/components/PillNav";
+import logo from "../public/dtb-logo.png";
 import "./globals.css";
 import {SiGit, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript} from "react-icons/si";
 
@@ -74,23 +76,26 @@ export default function RootLayout({
     >
 
     <header>
-        <nav className="p-4 flex flex-col md:flex-row md:justify-between md:items-center bg-amber-500">
-            <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/dtb-logo.png" alt="Logo" className="w-36 h-36 rounded-full" id="website-logo"/>
-            </div>
-            <div id="nav-links" className="">
-                <BubbleMenu
-                    items={items}
-                    logo="/dtb-logo.png"
-                    menuAriaLabel="Toggle navigation"
-                    menuBg="#ffffff"
-                    menuContentColor="#111111"
-                    useFixedPosition={false}
-                    animationEase="back.out(1.5)"
-                    animationDuration={0.5}
-                    staggerDelay={0.12}
+        <nav className="flex justify-center items-center h-24 bg-amber-500">
+            <div id="nav-links" className="w-full">
+                <PillNav
+                    logo={logo.src}
+                    logoAlt="Company Logo"
+                    items={[
+                        { label: 'Home', href: '/' },
+                        { label: 'About', href: '/about-me' },
+                        { label: 'Projects', href: '/projects' },
+                        { label: 'Contact', href: '/contact' }
+                        ]}
+                    className="custom-nav"
+                    ease="power2.easeOut"
+                    baseColor="#000000"
+                    pillColor="#ffffff"
+                    hoveredPillTextColor="#ffffff"
+                    pillTextColor="#000000"
+                    initialLoadAnimation={false}
                 />
+                
             </div>
         </nav>
     </header>
