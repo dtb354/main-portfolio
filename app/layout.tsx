@@ -5,7 +5,10 @@ import LogoLoop from "@/components/LogoLoop";
 import PillNav from "@/components/PillNav";
 import logo from "../public/dtb-logo.png";
 import "./globals.css";
-import {SiGit, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {
+  SiGit, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript,
+  SiPhp, SiHtml5, SiCss3, SiExpress, SiLaravel, SiPython, SiMongodb, SiFlask
+} from "react-icons/si";
 
 
 const geistSans = Geist({
@@ -62,6 +65,14 @@ const techLogos = [
     { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
     { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
     { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+    { node: <SiPhp />, title: "PHP", href: "https://www.php.net" },
+    { node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+    { node: <SiLaravel />, title: "Laravel", href: "https://laravel.com" },
+    { node: <SiPython />, title: "Python", href: "https://www.python.org" },
+    { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+    { node: <SiFlask />, title: "Flask", href: "https://flask.palletsprojects.com" },
 ];
 
 export default function RootLayout({
