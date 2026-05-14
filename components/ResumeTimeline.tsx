@@ -8,7 +8,7 @@ export default function ResumeTimeline() {
           Experience
         </p>
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-          Resume Timeline
+          Resume
         </h2>
         <p className="mt-3 max-w-2xl text-white">
           A quick overview of my recent roles, responsibilities, and impact.
