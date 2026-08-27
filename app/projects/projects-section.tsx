@@ -15,6 +15,7 @@ import {
   SiMysql,
   SiOpenai,
   SiPhp,
+  SiReact,
   SiTailwindcss,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -109,6 +110,11 @@ const TECH_ICON_MAP: Record<string, TechIconMeta> = {
     icon: SiClaude,
     badgeClassName: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
   },
+  "react native": {
+    label: "React Native",
+    icon: SiReact,
+    badgeClassName: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200",
+  },
 };
 
 function getTechIconMeta(technology: string): TechIconMeta {
@@ -166,6 +172,14 @@ const projects: Project[] = [
     link: "https://biblioplex-arcane-desk.onrender.com",
     github: "https://github.com/dtb354/Biblioplex-Arcane-Desk",
   },
+  {
+    id: 6,
+    title: "Global To Social 010",
+    description: "A mobile app developed to help international first years of the Internation Business programme socialise and develop friendgroups with social routes around the city",
+    image: "/project-images/global-to-social-010.png",
+    technologies: ["Javascript", "HTML/CSS", "Express", "React Native"],
+    github: "https://github.com/TLE4-Pipos-inc/global-to-social-010",
+  }
 ];
 
 export default function ProjectsSection() {
