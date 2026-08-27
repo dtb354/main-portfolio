@@ -132,7 +132,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "NutriCoach",
-    description: "Developed an AI chatbot to assist in personalised dietary and nutritious guidance by using AI Context Engineering and the OpenAI API",
+    description: "Developed an AI chatbot to assist in personalised dietary and nutritious guidance by using AI Context Engineering and the OpenAI API.",
     image: "/project-images/NutriCoach.png",
     technologies: ["PHP", "Javascript", "MySQL", "HTML/CSS", "TailwindCSS", "OpenAI"],
     link: "https://project.cmi.hr.nl/2025_2026/tle1_t1/tle1_eindmarkt/healthy-app/login.php",
@@ -150,7 +150,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "NM Klikker",
-    description: "A web clicker game built using Laravel to bring awareness to animal life in the Netherlands developed for Natuurmonumenten",
+    description: "A web clicker game built using Laravel to bring awareness to animal life in the Netherlands developed for Natuurmonumenten.",
     image: "/project-images/NMKlikker.png",
     technologies: ["Laravel", "PHP", "HTML/CSS", "TailwindCSS"],
     github: "https://github.com/BoorZuur/TLE2",
@@ -166,7 +166,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Biblioplex Arcane Desk",
-    description: "A Magic: The Gathering tool for beginners to understand the 'stack' using an llm with an interactive UI",
+    description: "A Magic: The Gathering tool for beginners to understand the 'stack' using an llm with an interactive UI.",
     image: "/project-images/biblioplex_arcane_desk.png",
     technologies: ["Javascript", "HTML/CSS", "Express", "LangChain", "Claude AI"],
     link: "https://biblioplex-arcane-desk.onrender.com",
@@ -175,7 +175,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: "Global To Social 010",
-    description: "A mobile app developed to help international first years of the Internation Business programme socialise and develop friendgroups with social routes around the city",
+    description: "A mobile app developed to help international first years of the International Business programme socialise and develop friendgroups with social routes around the city.",
     image: "/project-images/global-to-social-010.png",
     technologies: ["Javascript", "HTML/CSS", "Express", "React Native"],
     github: "https://github.com/TLE4-Pipos-inc/global-to-social-010",
