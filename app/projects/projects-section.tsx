@@ -4,10 +4,13 @@ import React from "react";
 import Image from "next/image";
 import { LuCode } from "react-icons/lu";
 import {
+  SiClaude,
   SiCss3,
+  SiExpress,
   SiHtml5,
   SiJavascript,
   SiJsonwebtokens,
+  SiLangchain,
   SiLaravel,
   SiMysql,
   SiOpenai,
@@ -91,6 +94,21 @@ const TECH_ICON_MAP: Record<string, TechIconMeta> = {
     icon: SiOpenai,
     badgeClassName: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200",
   },
+  express: {
+    label: "Express",
+    icon: SiExpress,
+    badgeClassName: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200",
+  },
+  langchain: {
+    label: "LangChain",
+    icon: SiLangchain,
+    badgeClassName: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  },
+  claude: {
+    label: "Claude AI",
+    icon: SiClaude,
+    badgeClassName: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  },
 };
 
 function getTechIconMeta(technology: string): TechIconMeta {
@@ -110,7 +128,7 @@ const projects: Project[] = [
     title: "NutriCoach",
     description: "Developed an AI chatbot to assist in personalised dietary and nutritious guidance by using AI Context Engineering and the OpenAI API",
     image: "/project-images/NutriCoach.png",
-    technologies: ["PHP", "Javascript", "MySQL", "HTML/CSS", "TailwindCSS"],
+    technologies: ["PHP", "Javascript", "MySQL", "HTML/CSS", "TailwindCSS", "OpenAI"],
     link: "https://project.cmi.hr.nl/2025_2026/tle1_t1/tle1_eindmarkt/healthy-app/login.php",
     github: "https://github.com/dtb354/NutriCoach",
   },
@@ -138,7 +156,16 @@ const projects: Project[] = [
     image: "/project-images/ERD-internshipmatching.png",
     technologies: ["Laravel", "PHP", "JWT Web Tokens"],
     github: "https://github.com/TLE-3-Stage-Matching/Back-End"
-  }
+  },
+  {
+    id: 5,
+    title: "Biblioplex Arcane Desk",
+    description: "A Magic: The Gathering tool for beginners to understand the 'stack' using an llm with an interactive UI",
+    image: "/project-images/biblioplex_arcane_desk.png",
+    technologies: ["Javascript", "HTML/CSS", "Express", "LangChain", "Claude AI"],
+    link: "https://biblioplex-arcane-desk.onrender.com",
+    github: "https://github.com/dtb354/Biblioplex-Arcane-Desk",
+  },
 ];
 
 export default function ProjectsSection() {
