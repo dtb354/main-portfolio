@@ -13,7 +13,7 @@ export const resumeItems: ResumeItem[] = [
     company: "Leiden University Medical Center",
     location: "Leiden, Netherlands",
     period: "September 2026 - Present",
-    description: "Contributing to the development of mijndnamedicatiepas.nl, a groundbreaking" + 
+    description: "Contributing to the development of mijndnamedicatiepas.nl, a groundbreaking " + 
     "application that analyses the dna of a patient with the use of a dna card and prevents ~30% of serious side effects" + 
     "by tailoring the medication according to the patient's genetics and dna",
     highlights: [
