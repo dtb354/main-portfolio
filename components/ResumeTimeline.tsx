@@ -37,7 +37,7 @@ export default function ResumeTimeline() {
               </span>
             </div>
 
-            <p className="mt-4 leading-relaxed text-zinc-400">{item.description}</p>
+            <p className="mt-3 leading-relaxed text-orange-300">{item.description}</p>
 
             <ul className="mt-4 space-y-2">
               {item.highlights.map((highlight) => (

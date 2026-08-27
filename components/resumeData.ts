@@ -9,10 +9,22 @@ export type ResumeItem = {
 
 export const resumeItems: ResumeItem[] = [
   {
+    title: "Full Stack Engineer - Intern",
+    company: "Leiden University Medical Center",
+    location: "Leiden, Netherlands",
+    period: "September 2026 - Present",
+    description: "Contributing to the development of mijndnamedicatiepas.nl, a groundbreaking" + 
+    "application that analyses the dna of a patient with the use of a dna card and prevents ~30% of serious side effects" + 
+    "by tailoring the medication according to the patient's genetics and dna",
+    highlights: [
+      "Developed new skills in Python and Flask"
+    ]
+  },
+  {
     title: "Peercoach",
     company: "Rotterdam University of Applied Sciences",
     location: "Rotterdam, Netherlands",
-    period: "August 2025 - Present",
+    period: "August 2025 - July 2026",
     description:
       "Provided guidance and support to first-year students with coursework and projects",
     highlights: [
